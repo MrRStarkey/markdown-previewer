@@ -1,5 +1,4 @@
 import React from 'react';
-import {marked} from 'marked';
 import Markdown from 'marked-react';
 
 function Output(props){

@@ -28,7 +28,7 @@ class App extends React.Component {
 
   handleClick(args){
     
-    if (args == "editor"){
+    if (args === "editor"){
       if (this.state.outputActive){
         this.setState({editorActive: !this.state.editorActive});
       }else{
@@ -39,7 +39,7 @@ class App extends React.Component {
       }
     }
 
-    if (args == "output"){
+    if (args === "output"){
       if (this.state.editorActive){
         this.setState({outputActive: !this.state.outputActive});
       }else{
