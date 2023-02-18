@@ -2,7 +2,7 @@ import React from 'react';
 
 function Editor(props){
     
-    const arrow = props.isEditorActive ? "<" : ">";
+    const arrow = props.isEditorActive ? "-" : "+";
     let newStyle = props.isEditorActive ? props.styling.notCollapsed : props.styling.isCollapsed;
     var headerStyle;
     if (props.device === false){

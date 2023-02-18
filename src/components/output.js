@@ -5,7 +5,7 @@ function Output(props){
     
     
     
-    const arrow = props.isOutputActive ? ">" : "<";
+    const arrow = props.isOutputActive ? "-" : "+";
     let newStyle = props.isOutputActive ? props.styling.notCollapsed : props.styling.isCollapsed;
     var headerStyle;
     if (props.device === false){
@@ -20,7 +20,7 @@ function Output(props){
     return(
         <div id="previewContainer" style={newStyle}>
             <div className="header" style={headerStyle}>
-                <button className="outputToggle" onClick={props.onClick}>{arrow}</button>
+                <button className="outputToggle" onClick={props.onClick} style={props.device ? props.isEditorActive ? props.isOutputActive ? {"top":"calc(50% + (var(--navbarHeight) - 17px))"}:{"top":"calc(100% - 25px)"}:{"top":"79px"}:{}}>{arrow}</button>
                 <h2>Preview</h2>
             </div>
             <div  id="preview">
