@@ -4,11 +4,16 @@ function Editor(props){
     
     const arrow = props.isEditorActive ? "<" : ">";
     let newStyle = props.isEditorActive ? props.styling.notCollapsed : props.styling.isCollapsed;
-    let headerStyle = !props.isEditorActive ? {
-        "height": "100%",
-        "writing-mode": "vertical-rl",
-        "text-orientation": "upright",
-    }:{};
+    var headerStyle;
+    if (props.device === false){
+        console.log("its true");
+        headerStyle = !props.isEditorActive ? {
+            "height": "100%",
+            "writing-mode": "vertical-rl",
+            "text-orientation": "upright",
+        }:{};
+        
+    }
     return(
         <div id="editorContainer" style={newStyle}>
             <div className="header" style={headerStyle}>

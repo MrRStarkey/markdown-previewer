@@ -139,3 +139,16 @@ h2 {
   max-width: 90%;
   margin: 2rem auto;
 }
+
+
+@media screen and (max-width: 768px) {
+  .container {
+    
+    flex-direction: column;
+  }
+  
+  .navbar h1 {
+    font-size: 1rem;
+  }
+  
+}
